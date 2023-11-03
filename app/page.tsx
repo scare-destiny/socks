@@ -251,19 +251,21 @@ export default function Example() {
 						<FadeInStagger>
 							<div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8'>
 								{incentives.map((incentive) => (
-									<div key={incentive.name}>
-										<GrayscaleTransitionImage
-											src={incentive.imageSrc}
-											alt=''
-											className='h-24 w-auto'
-											width={240}
-											height={240}
-										/>
-										<h3 className='mt-6 text-md  font-serif text-gray-900'>
-											{incentive.name}
-										</h3>
-										<p className='mt-2 text-sm text-gray-500'>{incentive.description}</p>
-									</div>
+									<FadeIn key={incentive.name}>
+										<div>
+											<Image
+												src={incentive.imageSrc}
+												alt=''
+												className='h-24 w-auto'
+												width={240}
+												height={240}
+											/>
+											<h3 className='mt-6 text-md  font-serif text-gray-900'>
+												{incentive.name}
+											</h3>
+											<p className='mt-2 text-sm text-gray-500'>{incentive.description}</p>
+										</div>
+									</FadeIn>
 								))}
 							</div>
 						</FadeInStagger>
