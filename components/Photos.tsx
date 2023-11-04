@@ -11,7 +11,7 @@ export function Photos() {
 	let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
 	return (
-		<div className='py-24 sm:py-32  lg:pt-32'>
+		<div className='sm:mt-32 mt-48  lg:mt-48 '>
 			<FadeInStagger>
 				<div className='-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8'>
 					{[image1, image2, image3, image4, image5].map((image, imageIndex) => (
