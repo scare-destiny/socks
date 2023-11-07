@@ -3,7 +3,7 @@ import { FadeIn } from './FadeIn'
 export function CTA() {
 	return (
 		<div className='relative bg-custom-yellow sm:mt-32 mt-48  lg:mt-48'>
-			<div className='relative  bg-custom-blue md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2'>
+			<div className='relative  bg-custom-blue md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2 overflow-hidden'>
 				<img
 					className='h-full w-full object-cover'
 					src='https://cms-cdn.sockittome.com/pictures/1023/c4d20aba36fb21e7d98c5825dc6aad5f446f0562/subscription_hero.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply'
@@ -50,7 +50,7 @@ export function CTA() {
 					<div className='mt-8'>
 						<a
 							href='#'
-							className='inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
+							className='inline-flex rounded-md bg-custom-blue px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
 						>
 							Обрати Підписку
 						</a>
