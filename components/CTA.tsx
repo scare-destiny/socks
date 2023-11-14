@@ -1,12 +1,13 @@
 'use client'
 import { FadeIn } from './FadeIn'
+import Image from 'next/image'
 
 //@ts-ignore
 export function CTA({ scrollToPricing }) {
 	return (
 		<div className='relative bg-custom-yellow'>
 			<div className='relative  bg-custom-blue md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2 overflow-hidden'>
-				<img
+				<Image
 					className='h-full w-full object-cover'
 					src='https://cms-cdn.sockittome.com/pictures/1023/c4d20aba36fb21e7d98c5825dc6aad5f446f0562/subscription_hero.png?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply'
 					alt=''

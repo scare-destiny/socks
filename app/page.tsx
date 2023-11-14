@@ -138,7 +138,7 @@ export default function Home() {
 									aria-hidden='true'
 									className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:aspect-h-6 lg:aspect-w-5 group-hover:opacity-75'
 								>
-									<img
+									<Image
 										src={collection.imageSrc}
 										alt={collection.imageAlt}
 										className='h-full w-full object-cover object-center'
