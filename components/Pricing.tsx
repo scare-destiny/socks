@@ -18,7 +18,7 @@ const tiers = [
 	},
 	{
 		name: 'Середні/Великі Шкарпетки',
-	id: 'tier-medium-large',
+		id: 'tier-medium-large',
 		href: '#',
 		priceMonthly: '₴520',
 		// description: 'A plan that scales with your rapidly growing business.',
@@ -44,15 +44,20 @@ const tiers = [
 	},
 ]
 
+//@ts-ignore
 const sendGAEvent = (action, category, label, value) => {
+	//@ts-ignore
 	window.gtag('event', action, {
 		event_category: category,
 		event_label: label,
 		value: value,
 	})
 }
+//@ts-ignore
 
 const handleSubscribeClick = (tierName) => {
+	//@ts-ignore
+
 	sendGAEvent('subscribe_click', 'Subscription', tierName)
 	console.log(tierName)
 }
