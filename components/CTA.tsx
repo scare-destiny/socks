@@ -1,8 +1,10 @@
+'use client'
 import { FadeIn } from './FadeIn'
 
-export function CTA() {
+//@ts-ignore
+export function CTA({ scrollToPricing }) {
 	return (
-		<div className='relative bg-custom-yellow sm:mt-32 mt-48  lg:mt-48'>
+		<div className='relative bg-custom-yellow'>
 			<div className='relative  bg-custom-blue md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2 overflow-hidden'>
 				<img
 					className='h-full w-full object-cover'
@@ -38,19 +40,20 @@ export function CTA() {
 				<div className='pl-6 pr-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32'>
 					<FadeIn>
 						<p className='mt-2 text-3xl font-bold tracking-tight  sm:text-4xl'>
-							Start Getting Awesome Monthly Socks Today!
+							Почни отримувати чудові шкарпетки щомісяця вже сьогодні!
 						</p>
 					</FadeIn>
 					<p className='mt-6 text-base leading-7 '>
-						When you purchase a Sock It To Me Subscription, you or your super lucky
-						recipient will receive 2 pairs of our excellent socks every month, with
-						FREE global shipping! Some boxes even include special styles exclusive to
-						our subscribers and sneak peeks at new products!
+						Підписка на шкарпетки, з якою ти будеш отримувати 2 пари наших відмінних
+						шкарпеток щомісяця, з безкоштовною доставкою по всьому світу! Деякі набори
+						навіть включають спеціальні моделі, ексклюзивні для наших передплатників,
+						та прев&apos;ю нових продуктів!
 					</p>
 					<div className='mt-8'>
 						<a
 							href='#'
-							className='inline-flex rounded-md bg-custom-blue px-3.5 py-2.5 text-sm font-semibold  shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
+							onClick={scrollToPricing}
+							className='inline-flex  rounded-md bg-custom-blue px-3.5 py-2.5   text-sm font-semibold  shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
 						>
 							Обрати Підписку
 						</a>

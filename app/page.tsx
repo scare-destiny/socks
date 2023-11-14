@@ -48,77 +48,44 @@ const incentives = [
 	},
 ]
 
-const trendingProducts = [
+const collections = [
 	{
-		id: 1,
-		name: 'Leather Long Wallet',
-		color: 'Natural',
-		price: '$75',
+		name: 'Зеконом до 30%',
 		href: '#',
 		imageSrc:
-			'https://thesockbutler.co.uk/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fthesockbutler%2Fb3b84933-544e-4734-ad98-aa5cb79fbeed_Mens-Classic-Box-Nov2022.png%3Fauto%3Dcompress%2Cformat%26rect%3D200%2C0%2C800%2C1200%26w%3D300%26h%3D450&w=2048&q=75',
-		imageAlt: 'Hand stitched, orange leather long wallet.',
-	},
-	{
-		id: 1,
-		name: 'Leather Long Wallet',
-		color: 'Natural',
-		price: '$75',
-		href: '#',
-		imageSrc:
-			'https://thesockbutler.co.uk/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fthesockbutler%2Fb3b84933-544e-4734-ad98-aa5cb79fbeed_Mens-Classic-Box-Nov2022.png%3Fauto%3Dcompress%2Cformat%26rect%3D200%2C0%2C800%2C1200%26w%3D300%26h%3D450&w=2048&q=75',
-		imageAlt: 'Hand stitched, orange leather long wallet.',
-	},
-	{
-		id: 1,
-		name: 'Leather Long Wallet',
-		color: 'Natural',
-		price: '$75',
-		href: '#',
-		imageSrc:
-			'https://thesockbutler.co.uk/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fthesockbutler%2Fb3b84933-544e-4734-ad98-aa5cb79fbeed_Mens-Classic-Box-Nov2022.png%3Fauto%3Dcompress%2Cformat%26rect%3D200%2C0%2C800%2C1200%26w%3D300%26h%3D450&w=2048&q=75',
-		imageAlt: 'Hand stitched, orange leather long wallet.',
-	},
-	{
-		id: 1,
-		name: 'Leather Long Wallet',
-		color: 'Natural',
-		price: '$75',
-		href: '#',
-		imageSrc:
-			'https://thesockbutler.co.uk/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fthesockbutler%2Fb3b84933-544e-4734-ad98-aa5cb79fbeed_Mens-Classic-Box-Nov2022.png%3Fauto%3Dcompress%2Cformat%26rect%3D200%2C0%2C800%2C1200%26w%3D300%26h%3D450&w=2048&q=75',
-		imageAlt: 'Hand stitched, orange leather long wallet.',
-	},
-	// More products...
-]
-
-const primaryFeatures = [
-	{
-		name: 'Ексклюзивні та якісні українські бренди.',
+			'https://cms-cdn.sockittome.com/2022/09/12/19/44/31/4ab115f1-d14d-4210-97e6-42bf3c3bebae/subscription-save-2.jpg',
+		imageAlt:
+			'Brown leather key ring with brass metal loops and rivets on wood table.',
 		description:
-			'Ми єдина служба підписки на шкарпетки, яка пропонує вам найпопулярніші бренди шкарпеток.			.',
-		icon: CloudArrowUpIcon,
+			'Обирай підписку на 1, 3, 6 або 12 місяців шкарпеток. Чим довший термін підписки, тим більша вигода! Плюс БЕЗКОШТОВНА ДОСТАВКА щомісяця та несподіваний сюрприз у кожній коробці!	',
 	},
 	{
-		name: 'Гнучкі та доступні підписки.',
+		name: 'Легке Налаштування		',
+		href: '#',
+		imageSrc:
+			'https://cms-cdn.sockittome.com/2022/09/12/19/44/23/f354136d-ffe1-4ca6-8ac2-88f36508a43b/subscription-easy-2.jpg',
+		imageAlt:
+			'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
 		description:
-			'Ціни на нашу підписку на шкарпетки дуже привабливі, і ви можете скасувати підписку в будь-який час.',
-		icon: LockClosedIcon,
-	},
-	{
-		name: 'Повний контроль.',
-		description:
-			'Обирай, скільки пар тобі потрібно та які стилі шкарпеток ти хочеш! Ми створюємо кожну коробку індивідуально для тебе, виходячи з тих шкарпеток, які ХОЧЕШ ТИ.',
-		icon: ServerIcon,
+			'Все що тобі потрібно зробити це оформити підписку для розміру, який тобі потрібен. Потім просто відпочивай та розслабляйся, поки ми щомісяця доставляємо чудові зручні шкарпеткиІ!',
 	},
 ]
 
 export default function Home() {
+	const pricingRef = useRef(null)
+	const scrollToPricing = () => {
+		//@ts-ignore
+		pricingRef.current.scrollIntoView({ behavior: 'smooth' })
+	}
+
 	return (
 		<>
-			{/* Hero section */}
-			<div id='hero'>
-				<div className=' pb-32 sm:pb-48 lg:pb-48 '>
+			<div id='root'>
+				{/* CTA Section */}
+				<CTA scrollToPricing={scrollToPricing} />
+
+				{/* Hero section */}
+				{/* <div className=' pb-32 sm:pb-48 lg:pb-48 '>
 					<div className='relative isolate overflow-hidden pt-14'>
 						<img
 							src='/image3.jpeg'
@@ -157,8 +124,46 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+				
+				*/}
+				{/* Benefits section */}
+				<section
+					aria-labelledby='collection-heading'
+					className='mx-auto max-w-xl px-4  sm:px-6  lg:max-w-7xl lg:px-8 mt-48 sm:mt-32  lg:mt-48'
+				>
+					<div className='mt-10 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:space-y-0'>
+						{collections.map((collection) => (
+							<p key={collection.name} className='group block'>
+								<div
+									aria-hidden='true'
+									className='aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:aspect-h-6 lg:aspect-w-5 group-hover:opacity-75'
+								>
+									<img
+										src={collection.imageSrc}
+										alt={collection.imageAlt}
+										className='h-full w-full object-cover object-center'
+									/>
+								</div>
+								<h3 className='mt-4 text-base font-semibold text-gray-900'>
+									{collection.name}
+								</h3>
+								<p className='mt-2 text-sm text-gray-500'>{collection.description}</p>
+							</p>
+						))}
+					</div>
+				</section>
+
+				{/* Pricing section */}
+				<div ref={pricingRef}>
+					<Pricing />
+				</div>
+				{/* Testimonial section */}
+				<Testimonial />
+				<Faqs />
+				<Pricing />
+
 				{/* Incentives section */}
-				<div id='incentives' className='bg-gray-50'>
+				{/* <div id='incentives' className='bg-gray-50'>
 					<div className='mx-auto max-w-2xl text-center'>
 						<h2 className='mt-2 text-4xl font-bold font-serif tracking-tight text-gray-900 sm:text-6xl'>
 							Чому варто скористатись доставкою шкарпеток?
@@ -191,10 +196,7 @@ export default function Home() {
 							</div>
 						</FadeInStagger>
 					</div>
-				</div>
-
-				{/* CTA Section */}
-				<CTA />
+				</div> */}
 
 				{/* Products section */}
 				{/* <section aria-labelledby='  trending-heading'>
@@ -252,7 +254,7 @@ export default function Home() {
 				</section> */}
 
 				{/* Feature section */}
-				<div className='mx-auto mt-48 sm:mt-32  lg:mt-48  '>
+				{/* <div className='mx-auto mt-48 sm:mt-32  lg:mt-48  '>
 					<div className='relative isolate overflow-hidden bg-gray-900 px-6 py-20 sm:rounded-3xl sm:px-10 sm:mt-48 lg:mt-48 xl:px-24'>
 						<div className='mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0'>
 							<div className='lg:row-start-2 lg:max-w-md'>
@@ -284,10 +286,10 @@ export default function Home() {
 											<FadeIn key={feature.name}>
 												<div className='relative'>
 													<dt className='ml-9 inline-block font-semibold text-white'>
-														{/* <feature.icon
+														<feature.icon
 															className='absolute left-1 top-1 h-5 w-5 text-indigo-500'
 															aria-hidden='true'
-														/> */}
+														/>
 														{feature.name}
 													</dt>{' '}
 													<dd className='inline'>{feature.description}</dd>
@@ -311,19 +313,15 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-				</div>
+				</div> */}
 				{/* Customize Section */}
-				<Customize />
+				{/* <Customize /> */}
 				{/* Photos Section */}
 				<Photos />
-				{/* Testimonial section */}
-				<Testimonial />
-				{/* Pricing section */}
-				<Pricing />
 
 				{/* Newsletter section */}
-				<Newsletter />
-				{/* <Faqs /> */}
+				{/* <Newsletter /> */}
+
 				{/* Footer Section */}
 				{/* <footer className='bg-white'>
 					<div className='mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:mt-32 lg:px-8'>
@@ -363,20 +361,3 @@ export default function Home() {
 		</>
 	)
 }
-
-// <svg viewBox='0 0 500 100' width='40rem' className='hidden md:block'>
-// <path
-// 	id='curve'
-// 	d='M 0 50 Q 100 100 200 50 Q 300 0 400 50 Q 500 100 600 50 Z'
-// 	style={{ fill: 'transparent' }}
-// ></path>
-// <text x='25'>
-// 	<textPath
-// 		href='#curve' // Note: React 18 and earlier use xlinkHref, React 18.1.0+ uses href
-// 		className='font-gopher text-sb-blue text-4xl font-bold'
-// 		style={{ fill: 'rgb(31, 54, 70)' }}
-// 	>
-// 		Sock content for your inbox
-// 	</textPath>
-// </text>
-// </svg>

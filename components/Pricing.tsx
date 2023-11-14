@@ -1,5 +1,6 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { FadeIn, FadeInStagger } from './FadeIn'
+import { send } from 'process'
 
 const tiers = [
 	{
@@ -17,7 +18,7 @@ const tiers = [
 	},
 	{
 		name: 'Середні/Великі Шкарпетки',
-		id: 'tier-medium-large',
+	id: 'tier-medium-large',
 		href: '#',
 		priceMonthly: '₴520',
 		// description: 'A plan that scales with your rapidly growing business.',
@@ -42,6 +43,19 @@ const tiers = [
 		mostPopular: false,
 	},
 ]
+
+const sendGAEvent = (action, category, label, value) => {
+	window.gtag('event', action, {
+		event_category: category,
+		event_label: label,
+		value: value,
+	})
+}
+
+const handleSubscribeClick = (tierName) => {
+	sendGAEvent('subscribe_click', 'Subscription', tierName)
+	console.log(tierName)
+}
 
 function classNames(...classes: any) {
 	return classes.filter(Boolean).join(' ')
@@ -123,6 +137,7 @@ export function Pricing() {
 									<a
 										href={tier.href}
 										aria-describedby={tier.id}
+										onClick={() => handleSubscribeClick(tier.name)}
 										className={classNames(
 											tier.mostPopular
 												? 'bg-custom-blue text-white shadow-sm hover:bg-custom-blue'
