@@ -60,7 +60,7 @@ function classNames(...classes: any) {
 	return classes.filter(Boolean).join(' ')
 }
 
-export function Pricing() {
+const Pricing = () => {
 	const [isFormVisible, setIsFormVisible] = useState(false)
 	const [selectedTier, setSelectedTier] = useState('')
 
@@ -176,3 +176,5 @@ export function Pricing() {
 		</div>
 	)
 }
+
+export default Pricing

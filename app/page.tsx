@@ -1,14 +1,11 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import socksImage from '/socks.avif'
-import { GrayscaleTransitionImage } from '@/components/GrayScaleTransitionImage'
-import { Newsletter } from '@/components/Newsletter'
-import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Photos } from '@/components/Photos'
 import { Testimonial } from '@/components/Testimonial'
-import { Pricing } from '@/components/Pricing'
+const Pricing = dynamic(() => import('@/components/Pricing'), { ssr: false })
 import { Faqs } from '@/components/Faq'
 import { CTA } from '@/components/CTA'
 import { Customize } from '@/components/Customize'

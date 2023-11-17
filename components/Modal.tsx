@@ -109,19 +109,19 @@ export default function Modal({ isOpen, selectedTier, onClose }) {
 												as='h3'
 												className='text-base font-semibold leading-6 text-gray-900'
 											>
-												Payment successful
+												Дякуюємо за інтерес до нашого сервісу!
 											</Dialog.Title>
 											<div className='mt-2'>
 												<p className='text-sm text-gray-500'>
-													Lorem ipsum dolor sit amet consectetur adipisicing elit.
-													Consequatur amet labore.
+													Ми плануємо запускатись найближчим часом. Якщо цікаво, залиш будь
+													ласка свою пошту. Ми будемо тримати у курсі прогресу.
 												</p>
 											</div>
 										</div>
 										<form onSubmit={handleSubmit} className='mt-10 max-w-md'>
 											<div className='flex gap-x-4'>
 												<label htmlFor='email-address' className='sr-only'>
-													Email address
+													Електронна адреса
 												</label>
 												<input
 													id='email-address'
@@ -130,25 +130,15 @@ export default function Modal({ isOpen, selectedTier, onClose }) {
 													autoComplete='email'
 													required
 													className='min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:custom-blue sm:text-sm sm:leading-6'
-													placeholder='Enter your email'
+													placeholder='Електронна адреса'
 												/>
 												<button
 													type='submit'
 													className='flex-none rounded-md bg-custom-blue px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-custom-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-custom-blue'
 												>
-													Subscribe
+													Надіслати
 												</button>
 											</div>
-											<p className='mt-4 text-sm leading-6 text-gray-900'>
-												We care about your data. Read our{' '}
-												<a
-													href='#'
-													className='font-semibold text-custom-blue hover:bg-custom-blue'
-												>
-													privacy&nbsp;policy
-												</a>
-												.
-											</p>
 										</form>
 									</div>
 								</div>
