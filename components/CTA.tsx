@@ -13,6 +13,7 @@ export function CTA({ scrollToPricing }) {
 					width={700}
 					height={700}
 					src={socksHero}
+					priority={true}
 					alt=''
 				/>
 				<svg
