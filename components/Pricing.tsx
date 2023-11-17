@@ -1,6 +1,8 @@
+'use client'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { FadeIn, FadeInStagger } from './FadeIn'
-import { send } from 'process'
+import { useState } from 'react'
+import Modal from './Modal'
 
 const tiers = [
 	{
@@ -53,20 +55,28 @@ const sendGAEvent = (action, category, label, value) => {
 		value: value,
 	})
 }
-//@ts-ignore
-
-const handleSubscribeClick = (tierName) => {
-	//@ts-ignore
-
-	sendGAEvent('subscribe_click', 'Subscription', tierName)
-	console.log(tierName)
-}
 
 function classNames(...classes: any) {
 	return classes.filter(Boolean).join(' ')
 }
 
 export function Pricing() {
+	const [isFormVisible, setIsFormVisible] = useState(false)
+	const [selectedTier, setSelectedTier] = useState('')
+
+	//@ts-ignore
+	const handleSubscribeClick = (tierName) => {
+		setIsFormVisible(!isFormVisible) // Toggle form visibility
+		setSelectedTier(tierName)
+		//@ts-ignore
+		sendGAEvent('subscribe_click', 'Subscription', tierName)
+		console.log(tierName)
+	}
+
+	const handleCloseModal = () => {
+		setIsFormVisible(false)
+	}
+
 	return (
 		<div className='bg-custom-yellow sm:mt-32 mt-48  lg:mt-48 pb-16'>
 			<div className='mx-auto max-w-7xl px-6 lg:px-8'>
@@ -140,14 +150,14 @@ export function Pricing() {
 										</ul>
 									</div>
 									<a
-										href={tier.href}
+										// href={tier.href}
 										aria-describedby={tier.id}
 										onClick={() => handleSubscribeClick(tier.name)}
 										className={classNames(
 											tier.mostPopular
-												? 'bg-custom-blue text-white shadow-sm hover:bg-custom-blue'
+												? 'bg-custom-blue text-white shadow-sm hover:bg-custom-blue '
 												: 'text-custom-blue ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300',
-											'mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-custom-blue'
+											'mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-custom-blue cursor: pointer '
 										)}
 									>
 										Оформити підписку
@@ -157,6 +167,11 @@ export function Pricing() {
 						))}
 					</div>
 				</FadeInStagger>
+				<Modal
+					isOpen={isFormVisible}
+					selectedTier={selectedTier}
+					onClose={handleCloseModal}
+				/>
 			</div>
 		</div>
 	)
