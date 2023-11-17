@@ -134,7 +134,7 @@ export default function Example() {
 						</g>
 						<g
 							id='SvgjsG1213'
-							featurekey='dYASrj-0'
+							feature-key='dYASrj-0'
 							transform='matrix(3.7505210851127897,0,0,3.7505210851127897,-3.62600279503555,124.24739457443604)'
 							fill='#393e46'
 						>
@@ -146,7 +146,7 @@ export default function Example() {
 						width={158}
 						height={48}
 						viewBox='0 0 403.3636363636364 83'
-						class='css-1j8o68f'
+						// class='css-1j8o68f'
 					>
 						<defs id='SvgjsDefs1988'>
 							<linearGradient id='SvgjsLinearGradient1995'>
@@ -160,7 +160,7 @@ export default function Example() {
 						</defs>
 						<g
 							id='SvgjsG1989'
-							featurekey='symbolContainer'
+							feature-key='symbolContainer'
 							transform='matrix(1,0,0,1,0,0)'
 							fill='url(#SvgjsLinearGradient1995)'
 						>
@@ -173,7 +173,7 @@ export default function Example() {
 						</g>
 						<g
 							id='SvgjsG1990'
-							featurekey='symbolFeature-0'
+							feature-key='symbolFeature-0'
 							transform='matrix(0.662878787878788,0,0,0.662878787878788,15.674242424242424,7.8779833641919215)'
 							fill='url(#SvgjsLinearGradient1998)'
 						>
@@ -183,7 +183,7 @@ export default function Example() {
 						</g>
 						<g
 							id='SvgjsG1991'
-							featurekey='nameFeature-0'
+							feature-key='nameFeature-0'
 							transform='matrix(1.3068803523342298,0,0,1.3068803523342298,114.90899187248361,10.283595069847454)'
 							fill='#111111'
 						>
@@ -199,7 +199,7 @@ export default function Example() {
 						<defs id='SvgjsDefs2317'></defs>
 						<g
 							id='SvgjsG2318'
-							featurekey='G09qjj-0'
+							feature-key='G09qjj-0'
 							transform='matrix(1.0463891877107407,0,0,1.0463891877107407,-13.126545290551142,-5.680974529353644)'
 							fill='#ff9999'
 						>
@@ -226,7 +226,7 @@ export default function Example() {
 			>
 				{names.map((name) => (
 					<li
-						key={name.email}
+						key={name.name}
 						className='col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow'
 					>
 						<div className='flex w-full items-center justify-between space-x-6 p-6'>
