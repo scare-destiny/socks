@@ -55,13 +55,13 @@ export function CTA({ scrollToPricing }) {
 						та прев&apos;ю нових продуктів!
 					</p>
 					<div className='mt-8'>
-						<a
+						<button
 							href='#'
 							onClick={scrollToPricing}
 							className='inline-flex  rounded-md bg-custom-blue px-3.5 py-2.5   text-sm font-semibold  shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
 						>
 							Обрати Підписку
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
