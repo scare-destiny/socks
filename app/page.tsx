@@ -1,15 +1,6 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { XMarkIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon } from '@heroicons/react/24/outline'
-import {
-	ArrowPathIcon,
-	ChevronRightIcon,
-	CloudArrowUpIcon,
-	LockClosedIcon,
-	ServerIcon,
-} from '@heroicons/react/20/solid'
 import socksImage from '/socks.avif'
 import { GrayscaleTransitionImage } from '@/components/GrayScaleTransitionImage'
 import { Newsletter } from '@/components/Newsletter'
