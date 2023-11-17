@@ -4,6 +4,7 @@ import Image from 'next/image'
 import socksHero from '@/public/socks_hero.webp'
 
 //@ts-ignore
+
 export function CTA({ scrollToPricing }) {
 	return (
 		<div className='relative bg-custom-yellow'>
@@ -56,7 +57,6 @@ export function CTA({ scrollToPricing }) {
 					</p>
 					<div className='mt-8'>
 						<button
-							href='#'
 							onClick={scrollToPricing}
 							className='inline-flex  rounded-md bg-custom-blue px-3.5 py-2.5   text-sm font-semibold  shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'
 						>

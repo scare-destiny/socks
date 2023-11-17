@@ -7,7 +7,7 @@ import { Photos } from '@/components/Photos'
 import { Testimonial } from '@/components/Testimonial'
 const Pricing = dynamic(() => import('@/components/Pricing'), { ssr: false })
 import { Faqs } from '@/components/Faq'
-import { CTA } from '@/components/CTA'
+import { CTA } from '@/components/CTA.1'
 import { Customize } from '@/components/Customize'
 
 const incentives = [
