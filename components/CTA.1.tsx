@@ -8,9 +8,9 @@ import socksHero from '@/public/socks_hero.webp'
 export function CTA({ scrollToPricing }) {
 	return (
 		<div className='relative bg-custom-yellow'>
-			<div className='relative  bg-custom-blue md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2 overflow-hidden'>
+			<div className='relative  bg-custom-yellow md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2 overflow-hidden'>
 				<Image
-					className='h-full w-full object-cover'
+					className='h-full w-full object-contain'
 					width={700}
 					height={700}
 					src={socksHero}
